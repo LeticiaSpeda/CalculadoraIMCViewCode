@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - Propriedades:
 
     let pesoTextField = UITextField()
     let alturaTextField = UITextField()
     let calcularBotao = UIButton(type: .system)
+    
+    //MARK: - Ciclo de vida:
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,8 @@ class ViewController: UIViewController {
         configurarAlturaTextField()
         configurarBotao()
     }
+    
+    //MARK: - Ajudantes:
     
     func configurarPesoTextField() {
         pesoTextField.placeholder = "Digite seu peso aqui"
@@ -52,6 +58,8 @@ class ViewController: UIViewController {
         calcularBotao.widthAnchor.constraint(equalTo: alturaTextField.widthAnchor).isActive = true
         calcularBotao.addTarget(self, action: #selector(botaoCalcularIMC), for: .touchUpInside)
     }
+    
+    //MARK: - Seletores:
     
     @objc func botaoCalcularIMC() {
        
